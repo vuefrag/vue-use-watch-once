@@ -4,7 +4,7 @@
 
 <h1 align="center">vue-use-watch-once</h1>
 
-<p align="center"></p>
+<p align="center">A Vue 3 composition API utility providing a convenient shorthand for creating one-time watchers that automatically stop after first trigger.</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/vue-use-watch-once"><img src="https://img.shields.io/npm/v/vue-use-watch-once.svg" alt="npm version" /></a>
@@ -19,18 +19,18 @@ npm install vue-use-watch-once
 
 ## Usage
 
-Shorthand for watching value with `{ once: true }`. Once the callback fires once, the watcher will be stopped.
-See [Vue's docs](https://vuejs.org/guide/essentials/watchers.html#once-watchers) for full details.
-
-Similar to `watch`, but with `{ once: true }`
-
 ```ts
 import { watchOnce } from 'vue-use-watch-once'
+import { ref } from 'vue'
 
-watchOnce(source, () => {
-  // triggers only once
-  console.log('source changed!')
+const count = ref(0)
+
+watchOnce(count, (value) => {
+  console.log('Count changed once:', value)
 })
+
+count.value = 1 // Triggers callback
+count.value = 2 // Does not trigger
 ```
 
 ## License
