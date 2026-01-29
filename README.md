@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.svg" alt="vue-use-watch-once" width="100%" />
+  <img src="https://raw.githubusercontent.com/vuefrag/vue-use-watch-once/main/banner.svg" alt="vue-use-watch-once" width="100%" />
 </p>
 
 <h1 align="center">vue-use-watch-once</h1>

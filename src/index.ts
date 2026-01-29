@@ -1,5 +1,4 @@
 import type { MultiWatchSources, WatchCallback, WatchHandle, WatchOptions, WatchSource } from 'vue'
-// Inlined from @vueuse/shared/utils
 // TODO: Inline import MapOldSources
 // TODO: Inline import MapSources
 
